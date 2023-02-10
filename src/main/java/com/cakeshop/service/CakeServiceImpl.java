@@ -15,24 +15,20 @@ public class CakeServiceImpl implements CakeService{
 
 	@Override
 	public Cake insertCake(Cake cake) {
-		// TODO Auto-generated method stub
 		return cakeDao.cakeInsert(cake);
 	}
 
 	@Override
 	public Cake getCake(int id) {
-		// TODO Auto-generated method stub
 		return cakeDao.getCake(id);
 	}
 	@Override
 	public List<Cake> getCake() {
-		// TODO Auto-generated method stub
 		return cakeDao.getCake();
 	}
 
 	@Override
 	public void delCake(int id) {
-		// TODO Auto-generated method stub
 		cakeDao.delCake(id);
 	}
 

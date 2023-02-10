@@ -1,23 +1,20 @@
 package com.cakeshop.controller;
 
 import java.util.List;
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cakeshop.entity.Cake;
 import com.cakeshop.service.CakeService;
-
-import jakarta.transaction.Transactional;
 @RestController
 public class CakeController {
 	@Autowired
 	CakeService cakeService;
 	
-	@PostMapping("/cake/insert")
+	@PutMapping("/cake/insert")
 	public Cake cakeInsert(@RequestParam String flavour,@RequestParam double price) {
 		Cake c=new Cake(flavour,price);
 		return cakeService.insertCake(c);
@@ -37,6 +34,6 @@ public class CakeController {
 	}
 	@PostMapping("/cake/deleteCake")
 	public void deleteCake(int id) {
-		cakeService.delCake(id);
+		cakeService.delCake(id);/*  */
 	}
 }

@@ -6,7 +6,7 @@ import com.cakeshop.entity.Cake;
 
 public interface CakeService {
 public Cake insertCake(Cake c);
-public Cake getCake(int id);
+public Cake getCake(int idx);
 public void delCake(int id);
 public Cake editCake(Cake c);
 public List<Cake> getCake();
