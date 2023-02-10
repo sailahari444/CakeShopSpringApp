@@ -18,4 +18,11 @@ private String name;
 private String mob_no;
 private String email;
 private String address;
+public Customer(){};
+public  Customer(String name,String mob_no,String email,String address){
+    this.name=name;
+    this.mob_no=mob_no;
+    this.email=email;
+    this.address=address;
+}
 }

@@ -34,6 +34,6 @@ public class CakeController {
 	}
 	@PostMapping("/cake/deleteCake")
 	public void deleteCake(int id) {
-		cakeService.delCake(id);
+		cakeService.delCake(id);/*  */
 	}
 }
