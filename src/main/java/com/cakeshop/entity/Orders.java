@@ -6,9 +6,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 @Entity
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Orders {
 @Id
 @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -19,4 +21,12 @@ private String address;
 private String flavour;
 private double quantity;
 private double price;
+public Orders(String name,String mob_no,String address,String flavour,double quantity,double price){
+	this.name=name;
+	this.mob_no=mob_no;
+	this.address=address;
+	this.flavour=flavour;
+	this.quantity=quantity;
+	this.price=price;
+}
 }
