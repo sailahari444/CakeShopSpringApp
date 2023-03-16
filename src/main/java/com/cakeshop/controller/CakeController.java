@@ -9,13 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cakeshop.entity.Cake;
 import com.cakeshop.service.CakeService;
+
+import jakarta.validation.Valid;
 @RestController
 public class CakeController {
 	@Autowired
 	CakeService cakeService;
 	
 	@PutMapping("/cake/insert")
-	public Cake cakeInsert(@RequestParam String flavour,@RequestParam double price) {
+	public Cake cakeInsert(@RequestParam  String flavour,@RequestParam double price) {
 		Cake c=new Cake(flavour,price);
 		return cakeService.insertCake(c);
 	}
