@@ -11,16 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cakeshop.entity.Orders;
 import com.cakeshop.service.OrderService;
 
+import jakarta.validation.Valid;
+
 @RestController
 public class OrderController {
     @Autowired
     OrderService ordersService;
     @PostMapping("/orders/insert")
-    public Orders insertOrders(@RequestBody Orders orders){
+    public Orders insertOrders(@RequestBody @Valid Orders orders){
         return ordersService.insert(orders); 
     }
     @PostMapping("/orders/updateOrder")
-    public Orders updatOrders(@RequestBody Orders orders){
+    public Orders updatOrders(@RequestBody @Valid Orders orders){
         return ordersService.update(orders);
     }
     @PostMapping("/orders/getOrdersById")
